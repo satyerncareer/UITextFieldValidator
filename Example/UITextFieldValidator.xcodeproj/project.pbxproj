@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03894C1E868BC37BA5A532A2 /* UITextFieldValidator.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = UITextFieldValidator.podspec; path = ../UITextFieldValidator.podspec; sourceTree = "<group>"; };
+		03894C1E868BC37BA5A532A2 /* UITextFieldValidator.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UITextFieldValidator.podspec; path = ../UITextFieldValidator.podspec; sourceTree = "<group>"; };
 		0B308DA21A71F7B1B80E16FE /* Pods-UITextFieldValidator_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFieldValidator_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITextFieldValidator_Example/Pods-UITextFieldValidator_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UITextFieldValidator_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITextFieldValidator_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,9 +41,9 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		93CAB55934BB4B561F733202 /* Pods_UITextFieldValidator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextFieldValidator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB17482E087887860C089FDB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CB17482E087887860C089FDB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CE86961BB12A570C8C418FB5 /* Pods-UITextFieldValidator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFieldValidator_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITextFieldValidator_Tests/Pods-UITextFieldValidator_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E18765D40FA3DB5DBEB181DE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E18765D40FA3DB5DBEB181DE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		EDB02B25787EEECC110BDF30 /* Pods-UITextFieldValidator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFieldValidator_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITextFieldValidator_Tests/Pods-UITextFieldValidator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F933417DAD893DCF897A77C0 /* Pods_UITextFieldValidator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextFieldValidator_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF20124BA800846DCFB05FAD /* Pods-UITextFieldValidator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFieldValidator_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITextFieldValidator_Example/Pods-UITextFieldValidator_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = DYTH999535;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = DYTH999535;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -458,7 +460,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -504,7 +506,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -517,7 +519,9 @@
 			baseConfigurationReference = 0B308DA21A71F7B1B80E16FE /* Pods-UITextFieldValidator_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DYTH999535;
 				INFOPLIST_FILE = UITextFieldValidator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -532,7 +536,9 @@
 			baseConfigurationReference = FF20124BA800846DCFB05FAD /* Pods-UITextFieldValidator_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DYTH999535;
 				INFOPLIST_FILE = UITextFieldValidator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -546,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDB02B25787EEECC110BDF30 /* Pods-UITextFieldValidator_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = DYTH999535;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -567,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE86961BB12A570C8C418FB5 /* Pods-UITextFieldValidator_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = DYTH999535;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
