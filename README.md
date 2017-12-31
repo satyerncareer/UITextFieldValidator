@@ -9,7 +9,6 @@ UITextFieldValidator is a UITextField validator which can be use in different wa
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
 
 ## Installation
 

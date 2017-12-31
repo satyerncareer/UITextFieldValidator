@@ -15,8 +15,9 @@ public class Validator: NSObject {
         return Validator()
     }
     
-    public func textFieldValidator(withRange: (textField:UITextField, minRange:Int, maxRange:Int)...)->Bool{
+    public func textFieldValidator(withRange: (textField:UITextField, minRange:Int, maxRange:Int)...,CompletionHandler: (_ textField:UITextField? ,_ success:Bool) -> Void){
         var isValidatedFields:Bool? = true
+        var notValidatedTextField:UITextField?
         for (textFld, minRange, maxRange) in withRange {
             if isValidatedFields == true{
                 if let contentType = textFld.textContentType{
@@ -30,11 +31,17 @@ public class Validator: NSObject {
                 }
             }
             isValidatedFields = checkRange(rangeMin: minRange, rangeMax: maxRange, textField: textFld)
+            notValidatedTextField = textFld
         }
-        guard let validBool = isValidatedFields else {
-            return false
+        
+        if let isValid = isValidatedFields{
+            if isValid {
+                CompletionHandler(notValidatedTextField,isValid)
+            }else{
+                CompletionHandler(nil,isValid)
+            }
         }
-        return validBool
+        
     }
     private func checkRange(rangeMin:Int = 0, rangeMax:Int, textField:UITextField)->Bool{
         guard let textRange =  textField.text?.characters.count else {
@@ -47,8 +54,9 @@ public class Validator: NSObject {
         }
     }
     //MARK: - validator
-    public func textFieldValidator(textField:UITextField...)->Bool{
+    public func textFieldValidator(textField:UITextField... ,CompletionHandler: (_ textField:UITextField? ,_ success:Bool) -> Void){
         var isValidated:Bool? = true
+        var notValidatedTextField:UITextField?
         for txtFlds in textField {
             if let content = txtFlds.textContentType{
                 isValidated = checkContentType(contentType: content, textField: txtFlds)
@@ -62,11 +70,16 @@ public class Validator: NSObject {
                 }
             }
             
+            notValidatedTextField = txtFlds
         }
-        guard let valid = isValidated else {
-            return false
+        
+        if let isValid = isValidated{
+            if isValid {
+                CompletionHandler(notValidatedTextField,isValid)
+            }else{
+                CompletionHandler(nil,isValid)
+            }
         }
-        return valid
     }
     //MARK: - Validate tetxfield with content type
     private func checkContentType(contentType: UITextContentType!, textField: UITextField)->Bool?{
@@ -114,71 +127,3 @@ public class Validator: NSObject {
         return false
     }
 }
-extension String {
-    
-    //To check text field or String is blank or not
-    var isBlank: Bool {
-        get {
-            let trimmed = trimmingCharacters(in: CharacterSet.whitespaces)
-            return !trimmed.isEmpty
-        }
-    }
-    
-    //Validate Email
-    
-    var isEmail: Bool {
-        let lastChar = self.last
-        if self.contains(" ") || lastChar == "."{
-            return false
-        }
-        do {
-            let regex = try NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", options: .caseInsensitive)
-            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count)) != nil
-        } catch {
-            return false
-        }
-    }
-    
-    var isAlphanumeric: Bool {
-        return !isEmpty && range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
-    }
-    
-    //validate Password
-    var isValidPassword: Bool {
-        do {
-            let regex = try NSRegularExpression(pattern: "^[a-zA-Z_0-9\\-_,;.:#+*?=!§$%&/()@]+$", options: .caseInsensitive)
-            if(regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count)) != nil){
-                
-                if(self.characters.count>=6 && self.characters.count<=20){
-                    return true
-                }else{
-                    return false
-                }
-            }else{
-                return false
-            }
-        } catch {
-            return false
-        }
-    }
-    
-    var isPhoneNumber: Bool {
-        let PHONE_REGEX = "^[0-9]{6,14}$"
-        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
-        let result =  phoneTest.evaluate(with: self)
-        return result
-    }
-    
-    var isURL: Bool {
-        //Check for nil
-        if !self.isEmpty {
-            let url = URL(string: self)
-            // check if your application can open the NSURL instance
-            return UIApplication.shared.canOpenURL(url!)
-            
-        }
-        return false
-    }
-}
-
-
