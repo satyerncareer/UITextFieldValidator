@@ -18,7 +18,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'UITextFieldValidator'
 ```
-
+## How to use
+```ruby
+comming soon
+```
 ## Author
 
 satyencareer@gmail.com, satyendra.chauhan@appster.in
