@@ -20,8 +20,28 @@ pod 'UITextFieldValidator'
 ```
 ## How to use
 ```ruby
-comming soon
+import UITextFieldValidator
 ```
+There are two version of validation here, one is for simple validation and second one is validation with range. Range validation will tak two more input for minimum charectors and the maximum charectors
+
+you can pass multiple UITextField in both methods.
+
+Simple validation
+
+
+```ruby
+Validator.shareInstance.textFieldValidator(textField: UITextField()) { (textField ..., isSuccess) in
+    //hand result here
+}
+```
+With range
+
+```ruby
+Validator.shareInstance.textFieldValidator(withRange: (textField: UITextField(), minRange: 0, maxRange: 50)) { (textField, isSuccess) in
+//hand result here
+}
+```
+
 ## Author
 
 satyencareer@gmail.com, satyendra.chauhan@appster.in
