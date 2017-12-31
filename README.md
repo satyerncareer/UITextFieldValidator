@@ -44,7 +44,7 @@ Validator.shareInstance.textFieldValidator(withRange: (textField: TextFields...,
 Note :  When all textfield will be validated successfully then textfield will return nil else there will be a textfield which is not validated.
 
 ## Author
-###Satyendra Chauhan###
+### Satyendra Chauhan
 satyencareer@gmail.com
 
 ## License
