@@ -45,7 +45,7 @@ Note :  When all textfield will be validated successfully then textfield will re
 
 ## Author
 ### Satyendra Chauhan
-satyencareer@gmail.com
+satyenchauhan5@gmail.com
 
 ## License
 
