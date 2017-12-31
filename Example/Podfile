@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'UITextFieldValidator_Example' do
-  pod 'UITextFieldValidator', :path => '../'
+  pod 'UITextFieldValidator'
 
   target 'UITextFieldValidator_Tests' do
     inherit! :search_paths

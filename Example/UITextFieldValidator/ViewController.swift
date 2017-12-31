@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import UITextFieldValidator
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var myTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,5 +23,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+   
+    @IBAction func submitAction(_ sender: Any) {
+        Validator.shareInstance.textFieldValidator(textField: myTextField, emailTextField) { (textField:UITextField?, isSuccess) in
+            if isSuccess {
+                print("Validated.")
+            }else{
+                print("Not validated.")
+            }
+        }
+    }
 }
 
