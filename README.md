@@ -18,13 +18,18 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'UITextFieldValidator'
 ```
+## How it works
+
+The validator check your `ContentType` of your UITextField and according to ``ContentType`` it will validate text fields if Content``ContentType`` is set for your text field then it will validate according to your `KeyboardType`. All this take care by this lib.
+
 ## How to use
 ```ruby
 import UITextFieldValidator
 ```
+
 There are two version of validation here, one is for simple validation and second one is validation with range. Range validation will tak two more input for minimum charectors and the maximum charectors
 
-you can pass multiple UITextField in both methods.
+You can pass multiple UITextField in both methods.
 
 Simple validation
 
