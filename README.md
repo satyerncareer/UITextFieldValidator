@@ -30,15 +30,15 @@ Simple validation
 
 
 ```ruby
-Validator.shareInstance.textFieldValidator(textField: UITextField()) { (textField ..., isSuccess) in
+Validator.shareInstance.textFieldValidator(textField: TextFields...) { (textField, isSuccess) in
     //hand result here
 }
 ```
 With range
 
 ```ruby
-Validator.shareInstance.textFieldValidator(withRange: (textField: UITextField(), minRange: 0, maxRange: 50)) { (textField, isSuccess) in
-//hand result here
+Validator.shareInstance.textFieldValidator(withRange: (textField: TextFields..., minRange: 0, maxRange: 50)) { (textField, isSuccess) in
+    //hand result here
 }
 ```
 
