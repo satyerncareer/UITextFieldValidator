@@ -5,6 +5,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/UITextFieldValidator.svg?style=flat)](http://cocoapods.org/pods/UITextFieldValidator)
 [![Language](https://img.shields.io/badge/language-swift%204-green.svg)](https://alamofire.github.io/Alamofire)
 ## Example
+UITextFieldValidator is a UITextField validator which can be use in different ways. So you would now focus on writing your core login and let UITextFieldValidator handle all your field validations. For more you can see "How to use" section bellow.
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
