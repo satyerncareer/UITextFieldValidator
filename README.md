@@ -41,7 +41,7 @@ Validator.shareInstance.textFieldValidator(withRange: (textField: TextFields...,
     //hand result here
 }
 ```
-Note :  When all textfield will be validated successfully then textfield will return null else there will be a textfield which is not validated.
+Note :  When all textfield will be validated successfully then textfield will return nil else there will be a textfield which is not validated.
 
 ## Author
 
