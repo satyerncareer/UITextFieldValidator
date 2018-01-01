@@ -42,7 +42,7 @@ Validator.shareInstance.textFieldValidator(textField: TextFields...) { (textFiel
 ### With range
 
 ```ruby
-Validator.shareInstance.textFieldValidator(withRange: (textField: TextFields..., minRange: 0, maxRange: 50)) { (textField:UITextField, isSuccess) in
+Validator.shareInstance.textFieldValidator(withRange: (textField: TextFields..., minRange: 1, maxRange: 50)) { (textField:UITextField, isSuccess) in
     //handle result here
 }
 ```
