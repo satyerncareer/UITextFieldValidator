@@ -36,14 +36,14 @@ Simple validation
 
 ```ruby
 Validator.shareInstance.textFieldValidator(textField: TextFields...) { (textField:UITextField, isSuccess) in
-    //hand result here
+    //handle result here
 }
 ```
 With range
 
 ```ruby
 Validator.shareInstance.textFieldValidator(withRange: (textField: TextFields..., minRange: 0, maxRange: 50)) { (textField:UITextField, isSuccess) in
-    //hand result here
+    //handle result here
 }
 ```
 Note :  When all textfield will be validated successfully then textfield will return nil else there will be a textfield which is not validated.
