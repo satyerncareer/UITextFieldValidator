@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'UITextFieldValidator'
-s.version          = '0.1.5'
+s.version          = '0.1.6'
 s.summary          = 'UITextFieldValidator is provide textfield validation.'
 
 # UITextFieldValidation is improved validation base on you UITextField type. Now there is no need to write bunch of code for validate your textfield.
