@@ -60,7 +60,7 @@ Validator.shareInstance.validate(withView: yourView) { (textFields: [UITextField
 }
 ```
 
-Note :  When all textfield will be validated successfully then textfield will return nil else there will be a textfield which is not validated.
+Note :  When all textfields will be validated successfully then textfield will return nil else there will be a textfield which is not validated.
 
 ## Author
 ### Satyendra Chauhan
