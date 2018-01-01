@@ -47,7 +47,7 @@ Validator.shareInstance.textFieldValidator(withRange: (textField: TextFields...,
 }
 ```
 ### With View
-yourView is the which contains all your UITextField which need to be validated
+yourView is the view which contains all your UITextField which need to be validated
 ```ruby
 Validator.shareInstance.validate(withView: yourView) { (textFields: [UITextField]?, isValidated) in
     if isValidated {
