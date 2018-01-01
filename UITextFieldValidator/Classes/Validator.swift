@@ -3,7 +3,7 @@
 //  TextFieldValidator
 //
 //  Created by Satyen on 30/12/17.
-//  Copyright © 2017 CompanyName. All rights reserved.
+//  Copyright © 2017 Satyendra Chauhan. All rights reserved.
 //
 
 import Foundation
@@ -58,19 +58,12 @@ public class Validator: NSObject {
         var isValidated:Bool? = true
         var notValidatedTextField:UITextField?
         for txtFlds in textField {
-            if let content = txtFlds.textContentType{
-                isValidated = checkContentType(contentType: content, textField: txtFlds)
-                if isValidated == false{
-                    break
-                }
-            }else{
-                isValidated = checkKeyboardType(keyboardType: txtFlds.keyboardType, textField: txtFlds)
-                if isValidated == false{
-                    break
-                }
-            }
-            
+           
+            isValidated = validateSingleField(textField: txtFlds)
             notValidatedTextField = txtFlds
+            if isValidated == false{
+                break
+            }
         }
         
         if let isValid = isValidated{
@@ -80,6 +73,17 @@ public class Validator: NSObject {
                 CompletionHandler(nil,isValid)
             }
         }
+    }
+    //Validate Single Field
+    private func validateSingleField(textField: UITextField)->Bool?{
+        var isValidated: Bool? = true
+        if let content = textField.textContentType{
+            isValidated = checkContentType(contentType: content, textField: textField)
+           
+        }else{
+            isValidated = checkKeyboardType(keyboardType: textField.keyboardType, textField: textField)
+        }
+        return isValidated
     }
     //MARK: - Validate tetxfield with content type
     private func checkContentType(contentType: UITextContentType!, textField: UITextField)->Bool?{
@@ -125,5 +129,25 @@ public class Validator: NSObject {
             return textField.text?.isValidPassword
         }
         return false
+    }
+    //MARK: - Validate View
+    /**
+     CompletionHandler is contained two variable textFields and success
+     * textFields: [UITextField] : Contains array of unvarified textfields
+     * success :  containe false if any one of textfield will not verified
+     
+    */
+    public func validate(withView view: UIView,CompletionHandler: (_ textFields: [UITextField]? ,_ success: Bool) -> Void){
+        let textFieldArray: [UITextField] = view.subviews.filter{$0.isKind(of: UITextField.self)} as! [UITextField]
+    
+        let validatedField = textFieldArray.filter{
+            !validateSingleField(textField: $0)!
+
+        }
+        if validatedField.count == 0{
+            CompletionHandler(nil, true)
+        }else{
+            CompletionHandler(validatedField, false)
+        }
     }
 }

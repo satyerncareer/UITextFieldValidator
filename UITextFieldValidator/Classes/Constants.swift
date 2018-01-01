@@ -3,7 +3,7 @@
 //  TextFieldValidator
 //
 //  Created by Satyen on 29/12/17.
-//  Copyright © 2017 CompanyName. All rights reserved.
+//  Copyright © 2017 Satyendra Chauhan. All rights reserved.
 //
 
 import Foundation
