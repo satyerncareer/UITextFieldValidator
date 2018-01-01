@@ -35,14 +35,14 @@ You can pass multiple UITextField in both methods.
 
 
 ```ruby
-Validator.shareInstance.textFieldValidator(textField: TextFields...) { (textField:UITextField, isSuccess) in
+Validator.shareInstance.textFieldValidator(textField: TextFields_1,TextFields_2,TextFields_3...TextFields_n) { (textField:UITextField, isSuccess) in
     //handle result here
 }
 ```
 ### With range
 
 ```ruby
-Validator.shareInstance.textFieldValidator(withRange: (textField: TextFields..., minRange: 1, maxRange: 50)) { (textField:UITextField, isSuccess) in
+Validator.shareInstance.textFieldValidator(withRange: (textField: TextFields_1,TextFields_2,TextFields_3...TextFields_n, minRange: 1, maxRange: 50)) { (textField:UITextField, isSuccess) in
     //handle result here
 }
 ```
