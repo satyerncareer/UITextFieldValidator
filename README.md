@@ -46,6 +46,20 @@ Validator.shareInstance.textFieldValidator(withRange: (textField: TextFields...,
     //handle result here
 }
 ```
+With View
+
+```ruby
+Validator.shareInstance.validate(withView: self.view) { (textFields: [UITextField]?, isValidated) in
+    if isValidated {
+        //[UITextField]? will be nil
+        print("valid field")
+    }else{
+        print("not valid field")
+        //[UITextField]? will contaill all the non validated UITextFields
+    }
+}
+```
+
 Note :  When all textfield will be validated successfully then textfield will return nil else there will be a textfield which is not validated.
 
 ## Author
