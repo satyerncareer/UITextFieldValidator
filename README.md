@@ -31,7 +31,7 @@ There are two version of validation here, one is for simple validation and secon
 
 You can pass multiple UITextField in both methods.
 
-Simple validation
+### Simple validation
 
 
 ```ruby
@@ -39,17 +39,17 @@ Validator.shareInstance.textFieldValidator(textField: TextFields...) { (textFiel
     //handle result here
 }
 ```
-With range
+### With range
 
 ```ruby
 Validator.shareInstance.textFieldValidator(withRange: (textField: TextFields..., minRange: 0, maxRange: 50)) { (textField:UITextField, isSuccess) in
     //handle result here
 }
 ```
-With View
-
+### With View
+yourView is the which contains all your UITextField which need to be validated
 ```ruby
-Validator.shareInstance.validate(withView: self.view) { (textFields: [UITextField]?, isValidated) in
+Validator.shareInstance.validate(withView: yourView) { (textFields: [UITextField]?, isValidated) in
     if isValidated {
         //[UITextField]? will be nil
         print("valid field")
