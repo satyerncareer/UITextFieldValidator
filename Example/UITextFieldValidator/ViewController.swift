@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib.s
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,13 +25,21 @@ class ViewController: UIViewController {
 
    
     @IBAction func submitAction(_ sender: Any) {
-        Validator.shareInstance.textFieldValidator(textField: myTextField, emailTextField) { (textField:UITextField?, isSuccess) in
-            if isSuccess {
-                print("Validated.")
+        Validator.shareInstance.validate(withView: self.view) { (textFields: [UITextField]?, isValidated) in
+            if isValidated {
+                print("valid field")
             }else{
-                print("Not validated.")
+                print("not valid field")
             }
         }
+       
+//        Validator.shareInstance.textFieldValidator(textField: myTextField, emailTextField) { (textField:UITextField?, isSuccess) in
+//            if isSuccess {
+//                print("Validated.")
+//            }else{
+//                print("Not validated.")
+//            }
+//        }
     }
 }
 
