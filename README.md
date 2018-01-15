@@ -20,7 +20,9 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'UITextFieldValidator','0.1.7'
 ```
-### Note: ### Deployment Target should be 11.0
+## Note:
+Deployment Target should be 11.0
+
 ## How it works
 
 The validator check `ContentType` of your UITextField and according to ``ContentType`` it will validate text fields if ``ContentType`` is not set for your text field then it will validate according to your `KeyboardType`. All this take care by this lib.
