@@ -18,7 +18,7 @@ UITextField Validator is available through [CocoaPods](http://cocoapods.org). To
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'UITextFieldValidator'
+pod 'UITextFieldValidator','0.1.7'
 ```
 ## How it works
 
