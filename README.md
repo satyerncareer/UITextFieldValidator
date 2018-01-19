@@ -62,7 +62,7 @@ Validator.shareInstance.validate(withView: yourView) { (textFields: [UITextField
         print("valid field")
     }else{
         print("not valid field")
-        //[UITextField]? will contaill all the non validated UITextFields
+        //[UITextField]? will contain all the non validated UITextFields
     }
 }
 ```
